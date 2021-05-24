@@ -42,14 +42,14 @@ public class MainCorridor extends Corridor {
 
     @Override
     public void setPresence() {
-                System.out.println("presece call for main");
+                
 
         // lights and ac are always on here so no change 
     }
     
     @Override
     public void setAbsence() {
-                System.out.println("absence call for main");
+                
 
         // lights and ac are always on here so no change 
     }
@@ -80,7 +80,7 @@ public class MainCorridor extends Corridor {
     public String toString() {
         String  ret = new String();
         ret = ret.concat("Main corridor "+this.getId()+" Light "+ this.getId()
-        + ":"+ (light_unit.isEnabled()? "ON": "OFF") + "AC: "+ (ac_unit.isEnabled()? "ON": "OFF")  );
+        + ":"+ (light_unit.isEnabled()? "ON": "OFF") + "  AC: "+ (ac_unit.isEnabled()? "ON": "OFF")  );
         return ret;
     }
    

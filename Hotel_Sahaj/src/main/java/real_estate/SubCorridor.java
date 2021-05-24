@@ -44,7 +44,6 @@ public class SubCorridor extends Corridor {
 
     @Override
     public void setPresence() {
-        System.out.println("presece call for sub");
         if (super.getTimer_task().isTimer_running()) {
             super.getTimer().cancel();
             super.getTimer_task().setTimer_running(false);
@@ -55,9 +54,7 @@ public class SubCorridor extends Corridor {
     
     @Override
     public void setAbsence() {
-        System.out.println("absece call for sub");
         if (!super.getTimer_task().isTimer_running()) {
-            System.out.println("timer started");
             super.getTimer_task().setTimer_running(true);
             super.setTimer(new Timer());
             super.getTimer().schedule(super.getTimer_task(), 60 * 1000);
@@ -88,7 +85,7 @@ public class SubCorridor extends Corridor {
     public String toString() {
         String  ret = new String();
         ret = ret.concat("Sub corridor "+this.getId()+" Light "+ this.getId()
-        + ":"+ (light_unit.isEnabled()? "ON": "OFF") + "AC: "+ (ac_unit.isEnabled()? "ON": "OFF")  );
+        + ":"+ (light_unit.isEnabled()? "ON": "OFF") + "  AC: "+ (ac_unit.isEnabled()? "ON": "OFF")  );
         return ret;
     }
 
