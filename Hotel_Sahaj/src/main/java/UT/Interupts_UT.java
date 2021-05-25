@@ -22,9 +22,9 @@ import real_estate.Hotel;
  */
 public class Interupts_UT {
     private static Hotel hotel;
-    private static final Scanner SCANNER = new Scanner(System.in);
+    
     public static void main(String[] args) {
-        System.out.println(" Welcome to the Hotel management APP");
+       
         HotelFloorplan hotel_plan = new HotelFloorplan();
         SensorInput sensor = new SensorInput();
         Current_Time time_ip = new Current_Time();

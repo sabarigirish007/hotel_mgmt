@@ -6,6 +6,8 @@
 package real_estate;
 
 import Timer.Corridor_timer;
+import electricals.AC;
+import electricals.TubeLight;
 import java.util.Timer;
 
 /**
@@ -67,5 +69,8 @@ public abstract class Corridor {
     public abstract int gettotalpowerutil();
     public abstract void setDay();
     public abstract void setNight();
+    public abstract TubeLight getTubeLight();
+    public abstract AC getAC();
+    
     
 }

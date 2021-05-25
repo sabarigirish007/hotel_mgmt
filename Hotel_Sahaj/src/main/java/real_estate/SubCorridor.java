@@ -55,8 +55,8 @@ public class SubCorridor extends Corridor {
     @Override
     public void setAbsence() {
         if (!super.getTimer_task().isTimer_running()) {
-            super.getTimer_task().setTimer_running(true);
             super.setTimer(new Timer());
+            super.setTimer_task(new Corridor_timer(this, true));
             super.getTimer().schedule(super.getTimer_task(), 60 * 1000);
         }
         
@@ -94,6 +94,11 @@ public class SubCorridor extends Corridor {
         return hotel;
     }
 
-    
+    public  TubeLight getTubeLight(){
+        return light_unit;
+    }
+    public  AC getAC() {
+        return ac_unit;
+    }
     
 }

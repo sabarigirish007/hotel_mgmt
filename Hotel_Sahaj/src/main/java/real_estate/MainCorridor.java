@@ -42,14 +42,13 @@ public class MainCorridor extends Corridor {
 
     @Override
     public void setPresence() {
-                
-
+        super.setPresence(true);
         // lights and ac are always on here so no change 
     }
     
     @Override
     public void setAbsence() {
-                
+        super.setPresence(false);
 
         // lights and ac are always on here so no change 
     }
@@ -83,6 +82,11 @@ public class MainCorridor extends Corridor {
         + ":"+ (light_unit.isEnabled()? "ON": "OFF") + "  AC: "+ (ac_unit.isEnabled()? "ON": "OFF")  );
         return ret;
     }
-   
+    public  TubeLight getTubeLight(){
+        return light_unit;
+    }
+    public  AC getAC() {
+        return ac_unit;
+    }
     
 }
